@@ -1,10 +1,13 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import { getPosts } from "./utils/axiosCalls.js";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const call = async () => {
+    let resp = await getPosts();
+    console.log(resp);
+  };
+
+  call();
 
   return (
     <div className="App">
