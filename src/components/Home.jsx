@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { getPosts, getComments } from "../utils/axiosCalls.js";
+import { getPosts } from "../utils/axiosCalls.js";
 import Posts from "./Posts.jsx";
 
 function Home() {
@@ -17,8 +17,6 @@ function Home() {
 
     fetchData();
   }, []);
-
-  console.log(state);
 
   return state?.map((e, i) => (
     <Posts key={i} id={e.id} title={e.title} body={e.body} />

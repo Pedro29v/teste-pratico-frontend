@@ -13,7 +13,6 @@ export const getPosts = async () => {
 };
 
 export const getComments = async (id) => {
-  console.log(`estoy en la funcion ${id}`);
   const res = await postAPI.get(`/posts/${id}/comments`);
 
   return res.data;
