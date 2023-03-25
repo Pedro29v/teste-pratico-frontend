@@ -18,9 +18,13 @@ function Home() {
     fetchData();
   }, []);
 
-  return state?.map((e, i) => (
-    <Posts key={i} id={e.id} title={e.title} body={e.body} />
-  ));
+  return (
+    <div className="w-[90%] bg-secondary m-auto grid grid-cols-2 gap-4 ">
+      {state?.map((e, i) => (
+        <Posts key={i} id={e.id} title={e.title} body={e.body} />
+      ))}
+    </div>
+  );
 }
 
 export default Home;
