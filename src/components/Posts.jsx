@@ -22,15 +22,13 @@ function Posts({ id, title, body }) {
   return (
     <>
       <div
-        className="bg-orange-500 mb-8 w-[30rem] col-span-1 m-auto "
+        className=" text-black mb-8 w-[30rem] h-[12rem] col-span-1 m-auto p-4 border-2 rounded-sm "
         onClick={() => handleClick(id)}
       >
-        <span>
-          <p>Title:</p> {title}
-        </span>
-        <span>
-          <p>Post:</p> {body}
-        </span>
+        <p className="mb-2">
+          <span className="font-bold text-[1.2em] ">{title}</span>
+        </p>
+        <span>{body}</span>
       </div>
 
       {comments &&
