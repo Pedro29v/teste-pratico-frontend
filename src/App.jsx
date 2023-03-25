@@ -1,8 +1,14 @@
 import "./App.css";
-import Post from "./components/Post";
+import Home from "./components/Home";
+import Posts from "./components/Posts";
 
 function App() {
-  return <Post />;
+  return (
+    <>
+      <Home />
+      <Posts />
+    </>
+  );
 }
 
 export default App;
