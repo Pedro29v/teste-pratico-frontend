@@ -15,3 +15,32 @@ export const getComments = async (id) => {
 
   return res.data;
 };
+
+export const getUser = async (id) => {
+  const res = await postAPI.get(`/users/${id}`);
+
+  return res.data;
+};
+
+export const handleClick = (
+  id,
+  isOpen,
+  setIsOpen,
+  setComments,
+  setuser,
+  userId
+) => {
+  setIsOpen(!isOpen);
+
+  if (id) {
+    const call = async () => {
+      const resp = await getComments(id);
+      const user = await getUser(userId);
+
+      setComments(resp);
+      setuser(user);
+    };
+
+    call();
+  }
+};

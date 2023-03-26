@@ -1,9 +1,7 @@
-import React from "react";
-
-function Comments({ body, email, name, title }) {
+function Comments({ body, email, name }) {
   return (
     <>
-      <div className=" mb-4 p-4 w-[100%] text-[0.9em] md:text-[1em] md:w-[50rem]  ">
+      <div className=" mb-4 p-4 w-[100%] text-[0.8em] md:text-[0.9em] md:w-[50rem]  ">
         <p>
           <span className="font-bold">Email:</span> {email}
         </p>
