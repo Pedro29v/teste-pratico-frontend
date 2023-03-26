@@ -1,14 +1,20 @@
 import React from "react";
 
-function Comments({ body, email, name, postId }) {
-  console.log(postId);
+function Comments({ body, email, name, title }) {
   return (
-    <div className="bg-blue-500 mb-4 p-4 ">
-      <p>ID: {postId}</p>
-      <p>Email: {email}</p>
-      <p>Name: {name}</p>
-      <p>Comments: {body}</p>
-    </div>
+    <>
+      <div>
+        <div className=" mb-4 p-4 w-[50rem] ">
+          <p>
+            <span className="font-bold">Email:</span> {email}
+          </p>
+          <p>
+            <span className="font-bold">Name:</span> {name}
+          </p>
+          <p> {body}</p>
+        </div>
+      </div>
+    </>
   );
 }
 

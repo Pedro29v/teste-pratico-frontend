@@ -7,8 +7,6 @@ const postAPI = axios.create({
 export const getPosts = async () => {
   const response = await postAPI.get("/posts");
 
-  console.log(response.data);
-
   return response.data;
 };
 
